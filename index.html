@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="jp">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="https://okomeee.github.io/img/okome.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <title>順番決め</title>
+  </head>
+  <body>
+    <header class="fixed-top text-center text-white bg-secondary">
+      <h1 class="pt-3 mb-2">順番を決めるアプリ</h1>
+      <p class="pb-3 mb-0 today"></p>
+    </header>
+
+    <div class="main container">
+
+      <!-- flash -->
+      <div class="alert alert-warning alert-dismissible fade show d-none" role="alert">
+        <div class="close" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </div>
+        空文字は入力できません。同じ名前は登録できません ٩( ᐛ )و
+      </div>
+      <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+        <div class="close" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </div>
+        新しいメンバーを追加しました ٩( ᐛ )و
+      </div>
+
+      <!-- no member -->
+      <div class="no-member text-center font-weight-bold text-white">
+        メンバーが一人もいません ٩( ᐛ )و
+      </div>
+
+      <!-- member list -->
+      <div class="card list d-none">
+        <div class="card-header">
+          メンバーリスト
+        </div>
+        <ul class="list-group">
+        </ul>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteModalLongTitle">削除確認</h5>
+              <div class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </div>
+            </div>
+            <div class="modal-body">
+              このメンバーをリストから削除しますか？
+            </div>
+            <div class="modal-footer">
+              <div class="btn btn-danger" data-dismiss="modal">キャンセル</div>
+              <div class="btn btn-primary" id="delete">削除</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form -->
+      <form class="form-row justify-content-center my-4">
+        <div class="col-auto w-50">
+          <input type="text" class="form-control name-form" placeholder="ニックネーム">
+        </div>
+        <div class="col-auto">
+          <div id="add" class="btn btn-primary">追加</div>
+        </div>
+      </form>
+
+      <!-- get result -->
+      <div class="result-btn text-center d-none">
+        <div class="btn btn-info">発表順は...</div>
+      </div>
+
+      <div class="load-btn text-center d-none">
+        <div class="btn btn-info l-btn" disabled>
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Loading...
+        </div>
+      </div>
+
+      <!-- result -->
+      <div class="card result mt-4 d-none">
+        <div class="card-header">
+          発表順
+        </div>
+        <ul class="list-group">
+        </ul>
+      </div>
+
+    </div>
+
+    <footer class="fixed-bottom text-center py-2 text-white bg-secondary">
+      &copy; 2019 okomeee
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/assets/index.js"></script>
+  </body>
+</html>
