@@ -1,8 +1,0 @@
-@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+Rounded+1c:500&display=swap');
-
-body {
-  margin-top: 8rem;
-  margin-bottom: 4rem;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);
-}
